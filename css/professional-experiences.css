@@ -51,6 +51,18 @@ body{
     z-index: -1;
 }
 
+@supports not (-webkit-mask-composite: destination-out) {
+    .intro::before {
+        background: none;
+        border: 5px solid transparent;
+        background-clip: padding-box;
+        border-image: linear-gradient(to bottom right,  
+            #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, 
+            #43a047, #eeff41, #f9a825, #ff5722);
+        border-image-slice: 1;
+    }
+}
+
 .bar-container {
     display: flex;
     flex-direction: column; /* Stacks bar and content vertically */
