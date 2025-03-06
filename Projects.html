@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="css/Projects.css">
+    <script>
+        function toggleVisibility(event, id) {
+            let element = document.getElementById(id);
+
+            // Prevent toggling when clicking a link
+            if (event.target.tagName.toLowerCase() === 'a') {
+                return;
+            }
+
+            if (element) {
+                element.classList.toggle('visible');
+                element.classList.toggle('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="Projects-section" class="section active">
+        <a href="experience.html" class="back-button">&larr; Back</a>
+        <div class="profile-content">
+            <h2>Thanks for your interest,</h2>
+            <p class="profile-text">I've built few things, feel free to click on those bars to know more ..</p>
+        </div>
+        
+        <div class="profile-compo"onclick="toggleVisibility(event, 'P1-details')">
+            <h3>Contact managment system</h3>
+            <div id="P1-details" class="P1-details hidden">
+                <p>Used python to build it, used different functions and loops, created functions, anybody can use it to store phone numbers and names</p>
+                <p><a href="https://github.com/Krizcodes/Beginning/blob/main/Contact%20management%20system.py" target="_blank" class="P1">Click to view the code &rarr;</a></p>
+            </div>
+        </div>
+
+        <div class="profile-compo"onclick="toggleVisibility(event, 'P2-details')">
+            <h3>Moneybook Managment system</h3>
+            <div id="P2-details" class="P2-details hidden">
+                <p>Used java to build it, worked in vs code, used different functions and loops, separate login function is also there, anybody can use it to keep a track of their funds</p>
+            </div>
+        </div>
+
+        <div class="profile-compo"onclick="toggleVisibility(event, 'P3-details')">
+            <h3>Personal Portfolio webpage</h3>
+            <div id="P3-details" class="P3-details hidden">
+                <p>Used HTML, CSS and JavaScript to build it, currently you are looking at it</p>
+                <p><a href="https://github.com/Krizcodes/Beginning/blob/main/Contact%20management%20system.py" target="_blank" class="P1">Click to view the code &rarr;</a></p>
+            </div>
+        </div>
+
+        <div class="profile-compo"onclick="toggleVisibility(event, 'P4-details')"><h3>Analysis using Machine Learning</h3>
+            <div id="P4-details" class="P4-details hidden">
+                <p>Completed a training in Euphoria Genex and worked in two projects using machine learning (used numpy, pandas, SVM algorithm etc.)</p>
+                <p>• Soil testing and crop prediction<br>
+                • Brest Cancer prediction</p>
+            </div>
+        </div>
+
+        <div class="profile-compo"onclick="toggleVisibility(event, 'P5-details')">
+            <h3>Group Project</h3>
+            <div id="P5-details" class="P5-details hidden">
+                <p>Bus Booking System</p>
+                <p>Created a bus booking business model, built an application software for that business model where people can book buses just like
+                    uber, it was a group project, used SWIFT, SQL Workbench and java to build it</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

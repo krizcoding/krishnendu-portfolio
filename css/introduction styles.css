@@ -1,0 +1,156 @@
+body{
+    background:rgba(253, 253, 253, 0.9);
+    background-image: url('https://truscribe.com/wp-content/uploads/2024/08/5835f7e3-da58-4801-973a-81dddb3bedca.jpeg');
+    background-size: cover;
+    background-blend-mode:color-dodge;
+}
+
+/* Smooth animation for expanding sections */
+.contact-details, .skills-details, .profile-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* Show details when visible */
+.contact-details.visible, .skills-details.visible, .profile-details.visible {
+    max-height: 300px;
+}
+
+/* Ensure clicking anywhere inside does not block */
+.contact-details p, .skills-details p, .profile-details p {
+    pointer-events: auto;
+}
+
+
+.contact-details a {
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+    
+}
+
+/* Styling for the profile section */
+#introduction-section {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+}
+
+.profile-content {
+    padding: 30px;
+    background-color: #ffffff;
+    border: 2px solid #2218dc;
+    border-radius: 40px;
+    color: black;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-content img:hover {
+    transform: scale(1.4);
+}
+
+.profile-text-container {
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+}
+
+.profile-text-container h2 {
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+/* Profile components */
+.profile-compo {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #3da4c7;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-compo:hover {
+    background-color: #f3faff;
+}
+
+/* Hiding content initially */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* Styling headers */
+h3 {
+    color: rgb(32, 69, 219);
+}
+
+/* Styled paragraphs inside details sections */
+.skills-details p, .contact-details p, .profile-details p {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #2db5f0;
+    background-color: #fafafb;
+    color: black;
+    cursor: text;
+}
+
+/* General style for all social media icons */
+.ld, .gh, .lc {
+    display: inline-block;
+    width: 80px;  /* Icon size */
+    height: 80px;
+    background-size: cover;  /* Ensure the logo fits */
+    background-position: center;
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Individual logos using background-image */
+.ld {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png'); /* LinkedIn Logo */
+}
+
+.gh {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png'); /* GitHub Logo */
+}
+
+.lc {
+    background-image: url('https://cdn.iconscout.com/icon/free/png-512/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp&w=512'); /* LeetCode Logo */
+}
+
+/* Hover effect: Slight zoom */
+.ld:hover, .gh:hover, .lc:hover {
+    transform: scale(1.2);
+}
+
+/* Button styling */
+.back-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.back-button:active {
+    transform: scale(0.95); /* Slightly shrink the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow to create a pressed effect */
+}

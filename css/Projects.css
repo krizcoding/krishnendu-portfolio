@@ -1,0 +1,107 @@
+body{
+    background:rgba(253, 253, 253, 0.9);
+    background-image: url('https://truscribe.com/wp-content/uploads/2024/08/5835f7e3-da58-4801-973a-81dddb3bedca.jpeg');
+    background-size: cover;
+    background-blend-mode:color-dodge;
+}
+
+/* Initially hide the contact and skills details */
+.P1-details, .P2-details, .P3-details, .P4-details, .P5-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* When active class is added, roll down the section */
+.P1-details.hidden, .P2-details.hidden, .P3-details.hidden, .P4-details.hidden, .P5-details.hidden{
+    max-height: 0;
+}
+
+.P1-details.visible, .P2-details.visible, .P3-details.visible, .P4-details.visible, .P5-details.visible {
+    max-height: 200px; /* Adjust as needed */
+}
+
+/* Styling for the profile section */
+#Projects-section {
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+}
+
+.profile-compo {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #3da4c7;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.profile-content {
+    margin: 0;
+    padding: 50px;
+    background-color: #ffffff;
+    border: 2px solid #1c1491;
+    border-radius: 40px;
+    margin-top: 5px;
+    color: rgb(107, 23, 81);
+}
+
+.profile-content h2, 
+.profile-content p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.profile-content p {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h3 {
+   
+    color: rgb(32, 69, 219);
+}
+
+.P1-details p, .P2-details p, .P3-details p, .P4-details p, .P5-details p {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #2db5f0;
+    cursor: pointer;
+    background-color: #fafafb;
+    color: rgb(1, 1, 1);
+}
+
+.P1 {
+    text-decoration: none;
+    color: black;
+
+}
+
+/* Button styling (if needed) */
+.back-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.back-button:active {
+    transform: scale(0.95); /* Slightly shrink the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow to create a pressed effect */
+}

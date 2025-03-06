@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Experiences</title>
+    <link rel="stylesheet" href="css/professional-experiences.css">
+</head>
+<body>
+    <script>
+        function toggleVisibility(id) {
+            // Close all open content sections first
+            document.querySelectorAll('.content').forEach(content => {
+                if (content.id !== id) {
+                    content.classList.remove('visible');
+                }
+            });
+    
+            // Toggle only the clicked section
+            var element = document.getElementById(id);
+            element.classList.toggle('visible');
+        }
+    </script>
+
+    <a href="experience.html" class="back-button">&larr; Back</a> <!-- Back Button -->
+    <div class="intro">
+        <h3>Thanks for showing interest in my professional experiences, feel free to know more by clicking on those boxes with company names .. </h3> <!-- "Hel" stays above the bars -->
+    </div>
+    <div class="container">
+        <div class="bar-container">
+            <div class="bar" id="bar-xyz" onclick="toggleVisibility('content-xyz')">
+                <h2></h2>
+            </div>
+            <div class="content" id="content-xyz">
+                <p><b>(February/2020 – June/2021)</b><br>
+                    •	Sourced many candidates according to the requirement of BDEs (Data Analyst, Business Analyst, Java Developer etc)<br>
+                    •	Generated 10000+$ as revenue by selling training session, visa and job-related assistance for the immigrant students<br>
+                    •	Analysed the data from different candidate pool, sourced candidates for internal Requirements<br>
+                    •	Achieved each and every monthly targets<br>
+                    •	Worked in US Shift (Night Shift)
+                    </p>
+            </div>
+        </div>
+        <div class="bar-container">
+            <div class="bar" id="bar-zyx" onclick="toggleVisibility('content-zyx')">
+                <h3></h3>
+            </div>
+            <div class="content" id="content-zyx">
+                <p><b>(June/2022 – November/2022)</b><br>
+                    ●	Proven record of sourcing highly efficient talented people for internal and external requirements (BOSCH, CAPGEMINI, TRELLEBORG etc)<br>
+                    ●	Engaged in different hiring requirements (Full stack developer, Solution Architect, Project Manager, Data Scientist etc)<br>
+                    ●	Worked and successfully onboard talented employees for full time and contractual roles<br>
+                    ●	Assisted the manager in acquiring new clients (HappiestMinds, Freshworks etc)
+                    </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

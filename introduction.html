@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="css/introduction styles.css">
+    <script>
+        function toggleVisibility(event, id) {
+            let element = document.getElementById(id);
+
+            // Prevent toggling when clicking a link
+            if (event.target.tagName.toLowerCase() === 'a') {
+                return;
+            }
+
+            if (element) {
+                element.classList.toggle('visible');
+                element.classList.toggle('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="introduction-section" class="section active">
+        <a href="Cards.html" class="back-button">&larr; Back</a>
+
+        <div class="profile-content">
+            <div class="profile-text-container">
+                <h2>Hello,</h2>
+                <p class="profile-text">
+                    I'm a highly motivated recent post-graduate with a good
+                    academic background and a passion for IT-related development. Aspiring to secure a challenging job
+                    opportunity in a dynamic IT environment to gain hands-on experience and apply my technical and soft skills to
+                    real-world problems. Eager to collaborate with industry professionals, learn cutting-edge technologies,
+                    and contribute to innovative solutions that drive a positive impact in the digital landscape. Committed to
+                    continuous learning and eager to make a valuable contribution to the organization's success. My D.O.B. is 16/12/1999.
+                </p>
+            </div>
+            <img src="image.webp" alt="Profile Picture">
+        </div>
+
+        <div class="profile-compo" onclick="toggleVisibility(event, 'contact-details')">
+            <h3>Contact</h3>
+            <div id="contact-details" class="contact-details hidden">
+                <p>Phone: +9198******** [for security reasons, I'm not sharing my phone number here]</p>
+                <p>Email:<a href="mailto:kbhattacharyya12@gmail.com">kbhattacharyya12@gmail.com (click to mail)</p></a>
+            </div>
+        </div>
+
+        <div class="profile-compo" onclick="toggleVisibility(event, 'skills-details')">
+            <h3>Skills</h3>
+            <div id="skills-details" class="skills-details hidden">
+                <p>Technical Skills: • Programming Languages – C, Python, Java, C#<br>     
+                    • Front-end technologies – HTML, CSS, JavaScript<br>     
+                    • Framework – ASP.NET, Flask<br>
+                    • Database Technologies – SQL, PostgreSQL<br>
+                    • Software – MS Word, MS PowerPoint, MS Excel, Power BI<br>
+                    • Operating Systems – Windows, Linux, MacOS<br>
+                    • Miscellaneous – Data Structure and Algorithms, Prompt Engineering,
+                    Knowledge of 20 different AI tools like Midjourney, Gemini, Claude etc and ai agents
+                </p>
+                <p>Soft Skills: Problem solving, ● Presentation Skills, ● Quick thinker, ● Ability to anticipate, 
+                    ● Communication Skills, ● Research and analytical skills,
+                    ● Hardworking, ● Flexible in any environment
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-compo" onclick="toggleVisibility(event, 'profile-details')">
+            <h3>Profiles</h3>
+            <div id="profile-details" class="profile-details hidden">
+                <p><a href="https://www.linkedin.com/in/krishnendu-bhattacharyya-514565199/" target="_blank" class="ld"></a>
+                <a href="https://github.com/Krizcodes/" target="_blank" class="gh"></a>
+                <a href="https://leetcode.com/u/Kriz1111/" target="_blank" class="lc"></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

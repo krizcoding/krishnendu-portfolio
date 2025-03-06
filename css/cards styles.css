@@ -1,0 +1,104 @@
+body {
+    overflow: hidden;
+    background:rgba(253, 253, 253, 0.9);
+    background-image: url('https://truscribe.com/wp-content/uploads/2024/08/5835f7e3-da58-4801-973a-81dddb3bedca.jpeg');
+    background-size: cover;
+    background-blend-mode:color-dodge;
+}
+
+
+.content-wrapper {
+    position: relative;
+    margin: 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px; /* Ensures rounded corners */
+    z-index: 1;
+}
+
+.content-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 5px; /* Matches the border thickness */
+    border-radius: inherit;
+    background: linear-gradient(to bottom right,  
+        #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, 
+        #43a047, #eeff41, #f9a825, #ff5722);
+    
+    /* Standard mask property */
+    mask: linear-gradient(white 0 0) content-box, 
+          linear-gradient(white 0 0);
+    mask-composite: exclude;
+
+    /* Webkit mask for Safari and Chrome */
+    -webkit-mask: linear-gradient(white 0 0) content-box, 
+                  linear-gradient(white 0 0);
+    -webkit-mask-composite: destination-out;
+
+    z-index: -1;
+}
+
+
+
+.welcome {
+    margin-top: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    text-align: left;
+    color: #66a0b0;
+   /*background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #b0d7e1;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(231, 12, 12, 0.984);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card-container a {
+    text-decoration: none;
+    color: rgb(13, 36, 239);
+    font-weight: bold;
+    text-shadow: rgb(214, 247, 1) 1px 1px 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-container a:active {
+    transform: scale(0.95); /* Slightly shrink the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow to create a pressed effect */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.back-button:active {
+    transform: scale(0.95); /* Slightly shrink the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow to create a pressed effect */
+}

@@ -1,0 +1,33 @@
+/* Arrow Animation */
+.arrow-container {
+    margin-top: 2em;
+}
+
+.arrow-down {
+    width: 40px;
+    height: 40px;
+    border-right: 4px solid #333;
+    border-bottom: 4px solid #333;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    animation: blink 1.5s infinite;
+    cursor: pointer;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

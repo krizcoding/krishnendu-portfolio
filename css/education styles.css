@@ -1,0 +1,118 @@
+body{
+    background:rgba(253, 253, 253, 0.9);
+    background-image: url('https://truscribe.com/wp-content/uploads/2024/08/5835f7e3-da58-4801-973a-81dddb3bedca.jpeg');
+    background-size: cover;
+    background-blend-mode:color-dodge;
+}
+
+/* Box styling for sections */
+.edu-box {
+    border: 2px solid #774bbd;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edu-box:hover {
+    background: rgba(199, 201, 71, 0.171);
+    transition: 0.3s;
+}
+
+/* Clickable headers */
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+}
+
+h3 {
+    text-decoration: underline;
+    text-decoration-color: rgb(75, 49, 221); /* Change this to your desired underline color */
+    text-decoration-thickness: 4px; 
+}
+
+/* Initially hide the details */
+.table-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.certificates-details {
+    display: flex;
+    justify-content:left;
+    align-items:normal;
+    padding: 0 px;
+    max-height: 0;
+    cursor: text;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.certificates-details p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* When active, allow it to expand */
+.table-details.visible, .certificates-details.visible {
+    max-height: 500px; /* Adjust as needed */
+}
+
+
+.table-details table {
+    width: 80%;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, #d0a560, #1663ea);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table-details th, .table-details td {
+    padding: 20px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: text;
+}
+
+.table-details th {
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.table-details tr:nth-child(even) {
+    background: rgba(154, 18, 18, 0.1);
+}
+
+.table-details tr:nth-child(odd) {
+    background: rgba(154, 18, 18, 0.3);
+}
+
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: left;
+    top: 10px;
+    right: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.back-button:active {
+    transform: scale(0.95); /* Slightly shrink the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow to create a pressed effect */
+}
