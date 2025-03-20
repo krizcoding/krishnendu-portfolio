@@ -6,18 +6,18 @@ body{
 }
 
 /* Initially hide the contact and skills details */
-.P1-details, .P2-details, .P3-details, .P4-details, .P5-details {
+.P1-details, .P2-details, .P3-details, .P4-details, .P5-details, .P6-details {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
 }
 
 /* When active class is added, roll down the section */
-.P1-details.hidden, .P2-details.hidden, .P3-details.hidden, .P4-details.hidden, .P5-details.hidden{
+.P1-details.hidden, .P2-details.hidden, .P3-details.hidden, .P4-details.hidden, .P5-details.hidden, .P6-details.hidden {
     max-height: 0;
 }
 
-.P1-details.visible, .P2-details.visible, .P3-details.visible, .P4-details.visible, .P5-details.visible {
+.P1-details.visible, .P2-details.visible, .P3-details.visible, .P4-details.visible, .P5-details.visible, .P6-details.visible {
     max-height: 200px; /* Adjust as needed */
 }
 
@@ -75,7 +75,7 @@ h3 {
     color: rgb(32, 69, 219);
 }
 
-.P1-details p, .P2-details p, .P3-details p, .P4-details p, .P5-details p {
+.P1-details p, .P2-details p, .P3-details p, .P4-details p, .P5-details p, .P6-details p {
     margin: 0;
     padding: 10px;
     border: 1px solid #2db5f0;
